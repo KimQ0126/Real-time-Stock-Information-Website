@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!--    jqueryui-->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!--jquery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+<!--momentjs-->
+<script src="http://momentjs.com/downloads/moment-with-locales.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.14/moment-timezone-with-data.min.js"></script>
+<!--highchart-->
+<script src="https://code.highcharts.com/stock/highstock.src.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<!--angular-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.4/angular-material.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angular-ui-router/1.0.0-rc.1/angular-ui-router.min.js"></script>
+<!--CSS-->
+<link rel="stylesheet" type="text/css" href="Stock-Website-style.css">
+<!--JS-->
+<script src="Stock-Website.js"></script>
+<!--<script>-->
+<!--var myApp = angular.module('myApp',['ngAnimate']);-->
+<!--myApp.controller("firstCtrl",function($scope){-->
+<!--$scope.ifShow = false;-->
+<!--$scope.oppShow=true;-->
+<!--$scope.toggleShow = function(){-->
+<!--$scope.oppShow=$scope.ifShow;-->
+<!--$scope.ifShow = !$scope.ifShow;-->
+<!--}-->
+<!--});-->
+<!--</script>-->
+</head>
+    
+<body>
+    <div id="search">
+        <fieldset id="formarea">
+            <p style="text-align: center;margin: 15px;font-size: 24px;">Stock Market Search</p>
+            <div class="container" style="margin: 15px">
+                <div class="row">
+                    <form id="sform" class="form-inline" role="form" Method="GET" action="">
+
+                        <div class="col-md-3">
+                            <label for="stock_symbol">Enter Stock Ticket Symbol:<span style="color:red">*</span></label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" name="symbol" id="ss" style="width: 100%" placeholder="eg:AAPL" value="">
+                        </div>
+                        <div class="col-md-3">
+                            <button type="button" class="btn" id="quote_btn" style="background-color: darkblue;color: white"><span class="glyphicon glyphicon-search"></span> Get Quote
+                            </button>
+                            <button type="button" class="btn btn-default" id="clear_btn"><span class="glyphicon glyphicon-refresh"></span> Clear
+                            </button>
+                        </div>
+                   </form>
+                </div>
+                <div class="row">
+                <div class="col-md-offset-3 col-md-6" id="err1">
+                    <p class="error-info" style="display: none;">Select a valid entry</p>
+                </div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+    
+    <div id="line">
+    </div>
+    <!--fav list-->
+    <div class="container" id="result" ng-app="myApp">
+        <fieldset id="showarea" ng-controller="firstCtrl">
+           <div ng-view>
+           </div>
+            
+        </fieldset>
+    </div>
+    
+        <!--轮播区2-->
+    <div class="item" id="carousel_item_2">
+    </div>
+<ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none;"></ul>
+    
+    
+    </body>
+
+</html>

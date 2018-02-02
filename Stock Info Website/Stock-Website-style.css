@@ -1,0 +1,78 @@
+html{
+    height: 100%;
+}
+body{
+    background-image: url('http://cs-server.usc.edu:45678/hw/hw8/images/background.png');
+    height: 100%;
+    width: 100%
+    
+}
+#search{
+    margin: 5px;
+    margin-bottom: 15px;
+}
+#formarea{
+    background-color: white;
+    border-radius: 5px;
+    margin: auto;
+    height: 100%
+}
+#line{
+        height: 1px;
+        border-top: 1px solid white;
+        text-align: center;
+        margin: 5px;
+        margin-bottom: 15px;
+    
+    }
+#result{
+    margin: 5px;
+    margin-bottom: 15px;
+    padding: 0px;
+    padding-left: 0px;
+    padding-right: 10px;
+    width: 100%;
+}
+#showarea{
+    background-color: white;
+    border-radius: 5px;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+}
+#FavList{
+      transition: all linear 0.5s;
+      position: relative;
+      top: 0;
+      left: 0;
+}
+/*
+#Stock_detail{
+      transition: all linear 0.5s;
+      position: relative;
+      top: 0;
+      left: 0;
+}
+*/
+#carousel_item_1{
+    width: 100%;
+}
+#carousel_item_2{
+    width: 100%;
+}
+.green{
+    color: limegreen;
+}
+.red{
+    color: red;
+}
+.ng-hide {
+  left: 100%;
+}
+
+/*
+#Stock_detail .ng-hide {
+  left: 100%;
+}
+*/
